@@ -26,3 +26,8 @@ echo "Enable point-in-time-recovery (PITR) if prompted."
 echo "Click Browse S3 to choose the S3 bucket you created earlier."
 
 echo "Click Export."
+
+echo "############################"
+echo ""
+echo "Run the following command to verify output before running the next step"
+echo "aws s3 ls --recursive s3://${S3bucket}

@@ -25,18 +25,6 @@ source variables.inc
 #PubSubSubscription=
 
 cd dynamodb-spanner-migration/dataflow/
-mvn compile
-mvn exec:java \
--Dexec.mainClass=com.example.spanner_migration.SpannerBulkWrite \
--Pdataflow-runner \
--Dexec.args="--project=${PROJECT_ID} \
-             --instanceId=$InstanceName} \
-             --databaseId=$DatabaseName} \
-             --table=Migration \
-             --importBucket=${GCSbucket} \
-             --runner=DataflowRunner \
-             --region=${REGION}"
-
 
 #Setup a Dataflow job to write streaming data into Spanner
 
@@ -47,8 +35,8 @@ mvn exec:java \
 -Dexec.mainClass=com.example.spanner_migration.SpannerStreamingWrite \
 -Pdataflow-runner \
 -Dexec.args="--project=${PROJECT_ID} \
-             --instanceId=$InstanceName} \
-             --databaseId=$DatabaseName} \
+             --instanceId=${InstanceName} \
+             --databaseId=${DatabaseName} \
              --table=Migration \
              --experiments=allow_non_updatable_job \
 --subscription=projects/${PROJECT_ID}/subscriptions/${PubSubSubscription} \

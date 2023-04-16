@@ -9,11 +9,14 @@ source variables.inc
 
 
 # Enable Amazon DynamoDB streams on the source table,
+cd dynamodb-spanner-migration
 pip3 install --ignore-installed --target=lambda-deps google-cloud-pubsub
 
 cd lambda-deps; zip -r9 ../pubsub-lambda.zip *; cd -
 
 zip -g pubsub-lambda.zip ddbpubsub.py
+
+cp pubsub-lambda.zip ../
 
 # Create AWS IAM Role
 
