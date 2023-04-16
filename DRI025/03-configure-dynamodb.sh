@@ -25,3 +25,6 @@ echo "Under Use case, select Lambda, and then click Next."
 echo "In the Permission policies filter box, enter AWSLambdaDynamoDBExecutionRole and press Return to search."
 echo "Select the AWSLambdaDynamoDBExecutionRole checkbox, and then click Next."
 echo "In the Role name box, enter ${IAMrole} , and then click Create role."
+
+aws dynamodb update-table --table-name Migration \
+    --stream-specification StreamEnabled=true,StreamViewType=NEW_AND_OLD_IMAGES

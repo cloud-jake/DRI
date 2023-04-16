@@ -24,8 +24,7 @@ source variables.inc
 #06 - Dataflow
 #PubSubSubscription=
 
-
-cd dataflow
+cd dynamodb-spanner-migration/dataflow/
 mvn compile
 mvn exec:java \
 -Dexec.mainClass=com.example.spanner_migration.SpannerBulkWrite \

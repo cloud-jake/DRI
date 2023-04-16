@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source varibles.inc
+source variables.inc
 
 #02 - Prepare Migration
 #PubSubTopic=

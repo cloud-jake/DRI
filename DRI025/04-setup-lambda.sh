@@ -9,7 +9,7 @@ source variables.inc
 LAMBDA_ROLE=$(aws iam list-roles \
     --query 'Roles[?RoleName==`${IAMrole}`].[Arn]' \
     --output text)
-
+#fixme - quotes for IAMrole
 
 
 # Use the pubsub-lambda.zip package to create the AWS Lambda function.
