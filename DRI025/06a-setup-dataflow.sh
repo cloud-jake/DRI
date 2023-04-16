@@ -24,6 +24,10 @@ source variables.inc
 #06 - Dataflow
 #PubSubSubscription=
 
+#Because this can be an issue....
+gcloud services  disable dataflow.googleapis.com
+gcloud services  enable dataflow.googleapis.com
+
 cd dynamodb-spanner-migration/dataflow/
 mvn compile
 mvn exec:java \

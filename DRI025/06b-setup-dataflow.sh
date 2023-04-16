@@ -50,5 +50,11 @@ aws dynamodb put-item \
 
 
 
-
+echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+echo ""
+echo "Run this command"
+echo ""
+#echo "gcloud spanner databases execute-sql cymbaldb \
+#    --instance=cymbal-direct-instance \
+#    --sql="SELECT * FROM Migration WHERE Username='my-test-username'"
 
