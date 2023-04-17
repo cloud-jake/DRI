@@ -3,6 +3,15 @@
 
 PROJECT_ID=`gcloud config get-value project`
 
+
+#############################################
+# GLOBAL
+
+REGION=
+
+
+
+
 ##############################################
 # Task 1. Perform a backup/restore migration
 
