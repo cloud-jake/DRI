@@ -12,3 +12,9 @@ source variables.inc
 
 
 #  you should transfer the following login and password credentials to the new instance of the SQL server hosted on the SQL instance Cloud SQL instance.
+
+gcloud sql users create ${LOGIN} \
+--instance="${SQL_INSTANCE}" \
+--password="${PASS}"
+
+

@@ -7,6 +7,30 @@ source variables.inc
 
 #NEW_DB=dbtools
 
+# Connect to SQL Server Proxy
+#
+#echo "Invoke-WebRequest -Uri https://dl.google.com/cloudsql/cloud_sql_proxy_x64.exe -OutFile .\cloud_sql_proxy_x64.exe"
+#
+#echo ".\cloud_sql_proxy_x64.exe -instances=${SQL_INSTANCE}=tcp:1433"
+
+# Use the MS-Client VM to connect to Cloud SQL
+echo "go to GCP Compute and access the msclient VM"
+
+
+#curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+#curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+
+#sudo apt-get update
+#sudo apt-get install mssql-tools unixodbc-dev
+
+#echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+#echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+#source ~/.bashrc
+
+echo "sqlcmd -S [Your Private IP],1433 -U sqlserver"
+
+
+
 
 # Install the SQL Server Community Index and Statistics Maintenance solution for managing index fragmentation and statistics updates on the SQL instance Cloud SQL instance.
 

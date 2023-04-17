@@ -1,0 +1,10 @@
+student_03_0d1d75f14262@cloudshell:~/DRI/DRI018 (qwiklabs-gcp-00-979da37fbca8)$ gcloud beta sql import bak ${SQL_INSTANCE} gs://${GCP_BUCKET}/backup1.bak --database=${DB}
+Data from [gs://qwiklabs-gcp-00-979da37fbca8/backup1.bak] will be imported to [cymbaldirect-instance].
+
+Do you want to continue (Y/n)?  y
+
+ERROR: (gcloud.beta.sql.import.bak) HTTPError 403: The service account does not have the required permissions for the bucket.
+
+
+student_03_0d1d75f14262@cloudshell:~/DRI/DRI018 (qwiklabs-gcp-00-979da37fbca8)$ gcloud sql instances describe $SQL_INSTANCE
+gsutil iam ch serviceAccount:p387003016793-tyl0m6@gcp-sa-cloud-sql.iam.gserviceaccount.com:objectViewer gs://${GCP_BUCKET}

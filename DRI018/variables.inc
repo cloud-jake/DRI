@@ -7,7 +7,10 @@ PROJECT_ID=`gcloud config get-value project`
 #############################################
 # GLOBAL
 
-REGION=
+REGION=us-central1
+
+AWSaccesskey=
+AWSsecretkey=
 
 
 

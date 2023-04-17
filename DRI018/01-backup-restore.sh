@@ -39,6 +39,11 @@ gsutil mb -l ${REGION} gs://${GCP_BUCKET}
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/SQLServer.Procedural.Importing.html
 
 echo "Open ${GCE_VM_INSTANCE} in Compute Engine: https://console.cloud.google.com/compute/instances"
+echo "Set Windows Password"
+echo "Open SSMS and connect to ${RDS_INSTANCE}"
+echo "Get connection URL from AWS Console --> RDS" 
+echo ""
+echo "
 echo "Issue the following command:"
 echo ""
 echo "exec msdb.dbo.rds_backup_database
@@ -81,4 +86,4 @@ gsutil rsync -d -r s3://${AWS_BUCKET} gs://${GCP_BUCKET}
 # Hint: The Microsoft Server SQL Management (SSMS) tool is available in the Google Compute Engine VM instance named GCE VM Instance to access the database.
 # 
 
-
+gcloud beta sql import bak ${SQL_INSTANCE} gs://${GCP_BUCKET}/backup1.bak --database=${DB}
