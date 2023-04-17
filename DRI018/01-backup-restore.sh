@@ -85,5 +85,12 @@ gsutil rsync -d -r s3://${AWS_BUCKET} gs://${GCP_BUCKET}
 
 # Hint: The Microsoft Server SQL Management (SSMS) tool is available in the Google Compute Engine VM instance named GCE VM Instance to access the database.
 # 
+#
+SVC_EMAIL_ADDRESS=$(gcloud sql instances describe ${SQL_INSTANCE} --format='value(serviceAccountEmailAddress)') 
+echo $SVC_EMAIL_ADDRESS
+
+gsutil iam ch serviceAccount:${SVC_EMAIL_ADDRESS}:objectViewer gs://${GCP_BUCKET}
 
 gcloud beta sql import bak ${SQL_INSTANCE} gs://${GCP_BUCKET}/backup1.bak --database=${DB}
+
+
