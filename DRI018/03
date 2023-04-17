@@ -1,0 +1,22 @@
+#!/bin/bash
+
+source variables.inc
+
+#####################################################
+# Task 3. Install the SQL Server Maintenance Solution
+
+#NEW_DB=dbtools
+
+
+# Install the SQL Server Community Index and Statistics Maintenance solution for managing index fragmentation and statistics updates on the SQL instance Cloud SQL instance.
+
+
+
+
+# IndexOptimize is the SQL Server Maintenance Solution’s stored procedure for rebuilding and reorganizing indexes and updating statistics. To use this feature, create a new database named dbtools on the SQL instance Cloud SQL instance.
+
+
+
+
+# Thereafter, review and run the following three scripts in context to create only these objects from the Solution.
+# https://ola.hallengren.com/downloads.html  

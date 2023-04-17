@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source variables.inc
+
+##############################################################
+# Task 2. Transfer credentials between instances of SQL Server
+
+
+#LOGIN=
+#PASS=
+
+
+
+#  you should transfer the following login and password credentials to the new instance of the SQL server hosted on the SQL instance Cloud SQL instance.
