@@ -27,7 +27,18 @@ echo "go to GCP Compute and access the msclient VM"
 #echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 #source ~/.bashrc
 
-echo "sqlcmd -S [Your Private IP],1433 -U sqlserver"
+#echo "sqlcmd -S [Your Private IP],1433 -U sqlserver"
+
+###########################################
+#sudo apt-get install -y mssql-tools
+#wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
+#
+# CONNECTION_NAME=$(gcloud sql instances describe target --format='value(connectionName)')
+# ./cloud_sql_proxy -instances=${CONNECTION_NAME}=tcp:1433 &
+
+#/opt/mssql-tools/bin/sqlcmd -U sqlserver -S 127.0.0.1 -Q "select count(*)
+#from testdb.dbo.MarylandZipCodes"
+
 
 
 
