@@ -83,8 +83,7 @@ gcloud sql instances delete ${REPLICA2}
 gcloud sql instances create ${REPLICA4} \
     --master-instance-name=${REPLICA3} \
     --region=${REGION2} \
-    --availability-type="REGIONAL" \
-    --enable-bin-log
+    --availability-type="REGIONAL" 
 
 ## 2 - Promote replica3 as new primary
 ###First stop the primary and stop replication????????
@@ -107,5 +106,4 @@ gcloud sql instances delete ${REPLICA2}
 gcloud sql instances create ${REPLICA4} \
     --master-instance-name=${REPLICA3} \
     --region=${REGION2} \
-    --availability-type="REGIONAL" \
-    --enable-bin-log
+    --availability-type="REGIONAL" 

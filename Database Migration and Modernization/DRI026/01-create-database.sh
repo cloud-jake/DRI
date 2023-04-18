@@ -10,8 +10,6 @@ source variables.inc
 
 # Create a Cloud SQL for MySQL instance
 
-# --tier="db-n1-standard-2" \
-
 gcloud sql instances create ${INSTANCE_ID} \    
     --region=${REGION1} \
     --availability-type="REGIONAL" \

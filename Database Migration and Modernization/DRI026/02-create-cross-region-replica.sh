@@ -19,6 +19,6 @@ source variables.inc
 gcloud sql instances create ${REPLICA1} \
     --master-instance-name=${INSTANCE_ID} \
     --region=${REGION2} \
-    --availability-type="REGIONAL" \
-    --enable-bin-log
+    --availability-type="REGIONAL" 
+
 
