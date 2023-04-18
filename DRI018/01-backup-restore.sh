@@ -43,7 +43,7 @@ echo "Set Windows Password"
 echo "Open SSMS and connect to ${RDS_INSTANCE}"
 echo "Get connection URL from AWS Console --> RDS" 
 echo ""
-echo "
+echo ""
 echo "Issue the following command:"
 echo ""
 echo "exec msdb.dbo.rds_backup_database

@@ -40,6 +40,8 @@ echo "go to GCP Compute and access the msclient VM"
 #from testdb.dbo.MarylandZipCodes"
 
 
+#wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
+#CONNECTION_NAME=$(gcloud sql instances describe $SQL_INSTANCE --format='value(connectionName)')
 
 
 
