@@ -14,7 +14,8 @@ source variables.inc
 
 gcloud sql instances create ${INSTANCE_ID} \    
     --region=${REGION1} \
-    --availability-type="REGIONAL"
+    --availability-type="REGIONAL" \
+    --enable-bin-log
 
 gcloud sql users set-password root \
     --host=% \

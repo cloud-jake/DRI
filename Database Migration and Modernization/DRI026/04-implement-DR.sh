@@ -33,6 +33,7 @@ gcloud sql instances patch ${REPLICA1} --activation-policy ALWAYS
 gcloud sql instances create ${REPLICA2} \
     --master-instance-name=${REPLICA1} \
     --region=${REGION3} \
-    --availability-type="REGIONAL"
+    --availability-type="REGIONAL" \
+    --enable-bin-log
 
 

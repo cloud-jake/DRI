@@ -49,4 +49,5 @@ gcloud sql instances delete ${REPLICA2}
 gcloud sql instances create ${REPLICA4} \
     --master-instance-name=${REPLICA3} \
     --region=${REGION2} \
-    --availability-type="REGIONAL"
+    --availability-type="REGIONAL" \
+    --enable-bin-log
