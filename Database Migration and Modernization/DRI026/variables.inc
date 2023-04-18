@@ -1,7 +1,6 @@
 #
 #
 
-
 # Task 1. Create the database
 INSTANCE_ID=
 PASSWORD=
