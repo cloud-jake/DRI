@@ -23,7 +23,7 @@ REGION2=
 # Task 4. Implement disaster recovery
 
 
-Task 5. Implement a fallback
+#Task 5. Implement a fallback
 REPLICA2=
 REPLICA3=
 

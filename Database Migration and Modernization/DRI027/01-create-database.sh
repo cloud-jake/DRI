@@ -10,11 +10,12 @@ source variables.inc
 
 # Create a Cloud SQL for MySQL instance
 
-gcloud sql instances create ${INSTANCE_ID} \    
+gcloud sql instances create ${INSTANCE_ID} \
     --database-version=POSTGRES_12 \
+    --cpu=2 \
+    --memory=7680MB \
     --region=${REGION1} \
-    --availability-type="REGIONAL" \
-    --enable-bin-log
+    --availability-type="REGIONAL"
 
 gcloud sql users set-password root \
     --host=% \
