@@ -1,0 +1,39 @@
+Created [https://sqladmin.googleapis.com/sql/v1beta4/projects/qwiklabs-gcp-00-f10cd20efbe6/instances/cymbprimary].
+NAME: cymbprimary
+DATABASE_VERSION: MYSQL_8_0
+LOCATION: us-central1-c
+TIER: db-n1-standard-1
+PRIMARY_ADDRESS: 34.67.19.163
+PRIVATE_ADDRESS: -
+STATUS: RUNNABLE
+Promoting a read replica stops replication and converts the instance
+to a standalone primary instance with read and write capabilities.
+This can't be undone. To avoid loss of data, before promoting the
+replica, you should verify that the replica has applied all:x
+
+transactions received from the primary.
+
+Learn more:
+https://cloud.google.com/sql/docs/mysql/replication/manage-replicas#promote-replica
+
+Do you want to continue (Y/n)?  y
+
+Promoting Cloud SQL replica...done.     
+Promoted [https://sqladmin.googleapis.com/sql/v1beta4/projects/qwiklabs-gcp-00-f10cd20efbe6/instances/cymbprimary].
+The following message will be used for the patch API method.
+{"name": "cymdatabase", "project": "qwiklabs-gcp-00-f10cd20efbe6", "settings": {"activationPolicy": "NEVER"}}
+Patching Cloud SQL instance...done.     
+Updated [https://sqladmin.googleapis.com/sql/v1beta4/projects/qwiklabs-gcp-00-f10cd20efbe6/instances/cymdatabase].
+The following message will be used for the patch API method.
+{"name": "cymbaldatabase", "project": "qwiklabs-gcp-00-f10cd20efbe6", "settings": {"activationPolicy": "NEVER"}}
+ERROR: (gcloud.sql.instances.patch) HTTPError 400: Invalid request: Invalid flag for instance role: Activation policy for replica must be set to ALWAYS, currently 'NEVER'..
+All of the instance data will be lost when the instance is deleted.
+
+Do you want to continue (Y/n)?  y
+
+ERROR: (gcloud.sql.instances.delete) HTTPError 400: The requested operation is not valid for a replication master instance.
+All of the instance data will be lost when the instance is deleted.
+
+Do you want to continue (Y/n)?  y
+
+Deleting Cloud SQL instance...working   
