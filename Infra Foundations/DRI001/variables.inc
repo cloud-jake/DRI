@@ -16,7 +16,6 @@ ROUTER=
 DNSPOLICY=
 
 
-
 PROJECT_ID=`gcloud config get-value project`
 PROJ_NUM=$( gcloud projects describe $PROJECT_ID --format 'value(projectNumber)' )
 
