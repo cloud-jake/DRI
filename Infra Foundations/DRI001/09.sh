@@ -6,5 +6,5 @@ source variables.inc
 
 gcloud dns response-policies rules create rulestargcrio \
   --response-policy=${DNSPOLICY} \
-  --dns-name="*.gcr.io" \
+  --dns-name="*.gcr.io." \
   --local-data=name="*.gcr.io.",type="CNAME",ttl=300,rrdatas="restricted.googleapis.com."

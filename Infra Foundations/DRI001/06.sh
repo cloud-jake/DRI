@@ -10,5 +10,5 @@ source variables.inc
 
 gcloud dns response-policies rules create rulestarapi \
   --response-policy=${DNSPOLICY} \
-  --dns-name="*.googleapis.com" \
+  --dns-name="*.googleapis.com." \
   --local-data=name="*.googleapis.com.",type="CNAME",ttl=300,rrdatas="restricted.googleapis.com."

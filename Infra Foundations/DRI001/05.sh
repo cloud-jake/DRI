@@ -8,5 +8,5 @@ source variables.inc
 
 gcloud dns response-policies rules create rulerestricted \
   --response-policy=${DNSPOLICY} \
-  --dns-name=restricted.googleapis.com \
+  --dns-name=restricted.googleapis.com. \
   --local-data=name="restricted.googleapis.com.",type="A",ttl=300,rrdatas="199.36.153.4|199.36.153.5|199.36.153.6|199.36.153.7"

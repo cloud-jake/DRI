@@ -6,5 +6,5 @@ source variables.inc
 
 gcloud dns response-policies rules create rulefunction \
   --response-policy=${DNSPOLICY} \
-  --dns-name="*.cloudfunctions.net" \
+  --dns-name="*.cloudfunctions.net." \
   --local-data=name="*.cloudfunctions.net.",type="CNAME",ttl=300,rrdatas="restricted.googleapis.com."

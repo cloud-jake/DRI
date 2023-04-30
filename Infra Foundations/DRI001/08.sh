@@ -6,5 +6,5 @@ source variables.inc
 
 gcloud dns response-policies rules create rulestarrunapp \
   --response-policy=${DNSPOLICY} \
-  --dns-name="*.run.app" \
+  --dns-name="*.run.app." \
   --local-data=name="*.run.app.",type="CNAME",ttl=300,rrdatas="restricted.googleapis.com."

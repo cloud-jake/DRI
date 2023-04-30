@@ -6,5 +6,5 @@ source variables.inc
 # https://cloud.google.com/dns/docs/zones/manage-response-policies#manage_response_policies
 
 gcloud dns response-policies create $DNSPOLICY \
-    --networks=$NETWORK 
-
+    --networks=$NETWORK \
+    --description="DNS Policy for PGA"

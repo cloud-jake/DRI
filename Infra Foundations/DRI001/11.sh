@@ -6,5 +6,5 @@ source variables.inc
 
 gcloud dns response-policies rules create rulestarpkgdev \
   --response-policy=${DNSPOLICY} \
-  --dns-name="*.pkg.dev" \
+  --dns-name="*.pkg.dev." \
   --local-data=name="*.pkg.dev.",type="CNAME",ttl=300,rrdatas="restricted.googleapis.com."
