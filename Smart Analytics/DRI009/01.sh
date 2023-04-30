@@ -12,7 +12,7 @@ source variables.inc
 #REGION_TEMP=$LAB_REGION
 
 
-gsutil mb -l $REGION_DATA $GCS_DATA
-gsutil mb -l $REGION_CONFIG $GCS_CONFIG
-gsutil mb -l $REGION_TEMP $GCS_TEMP
+gsutil mb -l $REGION_DATA gs://${GCS_DATA}
+gsutil mb -l $REGION_CONFIG gs://${GCS_CONFIG}
+gsutil mb -l $REGION_TEMP gs://${GCS_TEMP}
 

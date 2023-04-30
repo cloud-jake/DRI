@@ -4,6 +4,10 @@ source variables.inc
 
 # Task 6 - Dataflow job execution on the created infrastructure
 
+#enable Dataflow API
+
+gcloud services enable dataflow.googleapis.com
+
 # In this step, we expect you to run a Dataflow job in Lab GCP Region region 
 # using the Google provided template file to import data from GCS to BigQuery.
 
