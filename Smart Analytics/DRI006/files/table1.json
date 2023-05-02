@@ -1,5 +1,4 @@
-{
-    "BigQuery Schema": [
+[
       {
         "name": "TradeReportId",
         "type": "STRING",
@@ -35,5 +34,4 @@
         "type": "FLOAT",
         "mode": "REQUIRED"
       }
-    ]
-  }
+]

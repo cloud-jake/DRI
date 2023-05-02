@@ -12,14 +12,16 @@ bq mk \
 
 # Deploy a Dataflow streaming job
 # https://cloud.google.com/dataflow/docs/tutorials/dataflow-stream-to-bigquery
+gcloud services disable dataflow.googleapis.com
 gcloud services enable dataflow.googleapis.com
+
 
 gcloud dataflow jobs run dri006 \
     --gcs-location gs://dataflow-templates/latest/PubSub_to_BigQuery \
     --region $REGION \
     --parameters \
-inputTopic=projects/$(PROJECT_ID)/topics/$topic,\
-outputTableSpec=${PROJECT_ID}:${dataset}.{$table2}
+inputTopic=projects/${PROJECT_ID}/topics/$topic1,\
+outputTableSpec=${PROJECT_ID}:${dataset}.${table2}
 #    --staging-location gs://$GCS/temp \
 
 
