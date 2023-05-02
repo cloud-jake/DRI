@@ -15,7 +15,7 @@ topic1=
 table2=
 
 # Task 3. Load data from Cloud SQL to BigQuery using Datastream
-instance=
+sqlinstance=
 topic2=
 sub2=
 
