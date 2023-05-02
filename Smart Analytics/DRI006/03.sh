@@ -68,10 +68,5 @@ gcloud dataflow flex-template run dri0063 \
     --parameters \
 inputFilePattern=gs://${GCS}/north_america_data/,\
 gcsPubSubSubscription=${sub2},\
-outputDatasetTemplate=${dataset},\
-outputStagingTableNameTemplate=BIGQUERY_TABLE
+outputDatasetTemplate=${dataset}
   
-
-
-
-
