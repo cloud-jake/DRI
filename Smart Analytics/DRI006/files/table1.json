@@ -1,0 +1,39 @@
+{
+    "BigQuery Schema": [
+      {
+        "name": "TradeReportId",
+        "type": "STRING",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "TradeDate",
+        "type": "DATE",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "TransactTime",
+        "type": "TIMESTAMP",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "Symbol",
+        "type": "STRING",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "LastPx",
+        "type": "FLOAT",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "StrikePrice",
+        "type": "FLOAT",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "TradeProfitLoss",
+        "type": "FLOAT",
+        "mode": "REQUIRED"
+      }
+    ]
+  }
