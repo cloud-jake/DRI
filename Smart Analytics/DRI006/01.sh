@@ -25,10 +25,10 @@ bq mk --transfer_config \
 "file_format":"CSV",
 "max_bad_records":"1",
 "ignore_unknown_values":"true",
-"skip_leading_rows":"1"' \
+"skip_leading_rows":"1"}' \
 --data_source=google_cloud_storage
 
-
+# need to make sure on-demand, not scheduled
 
 
 
@@ -40,5 +40,5 @@ bq mk --transfer_config \
 "file_format":"CSV",
 "max_bad_records":"1",
 "ignore_unknown_values":"true",
-"skip_leading_rows":"1"' \
+"skip_leading_rows":"1"}' \
 --data_source=google_cloud_storage
