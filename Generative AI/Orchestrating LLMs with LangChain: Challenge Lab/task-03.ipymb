@@ -1,0 +1,20 @@
+#TODO: Set up a summarization chain using the stuff method. Incorporate the model loaded earlier into the summarization chain to enhance the quality of the summary.
+
+
+
+
+# *****Solution*****
+stuff_chain = load_summarize_chain(vertex_llm_text, chain_type="stuff", prompt=prompt)
+
+
+three_pages = pages[:3]
+
+three_pages
+
+try:
+    print(stuff_chain.run(three_pages))
+except Exception as e:
+    print(
+        "The code failed since it won't be able to run inference on such a huge context and throws this exception: ",
+        e,
+    )

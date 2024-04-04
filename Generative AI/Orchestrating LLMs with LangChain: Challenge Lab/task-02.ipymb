@@ -1,0 +1,58 @@
+# orchestration_llms_with_langchain_challenge_notebook.ipynb
+
+# Add Below "Install Dependencies"
+
+# Install Vertex AI LLM SDK, langchain and dependencies
+! pip install google-cloud-aiplatform langchain==0.0.323 chromadb==0.3.26 pydantic==1.10.8 typing-inspect==0.8.0 typing_extensions==4.5.0 pandas datasets google-api-python-client pypdf faiss-cpu transformers config --upgrade --user
+
+# Then Retsart Kernel
+
+# # Automatically restart kernel after installs so that your environment can access the new packages
+import IPython
+
+app = IPython.Application.instance()
+
+app.kernel.do_shutdown(True)
+
+
+## Task 2. Load the model and prepare data
+
+#TODO: Load the pre-trained text generation model named text-bison@001. 
+
+
+
+# *****Solution*****
+vertex_llm_text = VertexAI(model_name="text-bison@001")
+
+
+
+
+#TODO: Download a PDF file from specified URL and save it in "data" directory
+# *****Solution*****
+data_folder = p.cwd() / "data"
+p(data_folder).mkdir(parents=True, exist_ok=True)
+
+pdf_url = "https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf"
+pdf_file = str(p(data_folder, pdf_url.split("/")[-1]))
+
+urllib.request.urlretrieve(pdf_url, pdf_file)
+
+
+
+#TODO: Load the PDF file and split it into individual pages.
+
+
+
+
+
+
+
+
+# *****Solution*****
+pdf_loader = PyPDFLoader(pdf_file)
+pages = pdf_loader.load_and_split()
+print(pages[3].page_content)
+
+
+
+
