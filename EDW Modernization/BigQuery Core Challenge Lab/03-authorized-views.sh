@@ -40,3 +40,20 @@ bq mk \
     --location=US \
     $SBQ_DATASET_NAME.${VIEW2} \
     """SELECT * FROM `$PROJECT_ID.$DATASET.$TABLE_NAME`"""
+
+
+
+
+
+bq mk \
+--use_legacy_sql=false \
+--view \
+'SELECT * EXCEPT (TransactTime, TradeReportID, MaturityDate) FROM $DATASET.$TABLE_NAME' \
+$SBQ_DATASET.$VIEW1
+
+
+bq mk \
+--use_legacy_sql=false \
+--view \
+"SELECT * FROM cymbal_dataset.cloudaudit_googleapis_com_activity_* " \
+$SBQ_DATASET.$VIEW2
