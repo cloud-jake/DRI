@@ -11,11 +11,15 @@ source variables.env
 bq query \
     --use_legacy_sql=false \
     --location=US \
-    --destination_table=$DATASET.$TABLE_NANME2 \
-    --destination_table_partitioning_field="TradeDate" 
-    --destination_table_partitioning_type="DAY" \
-    --destination_table_clustering_fields="Symbol" \
+    --destination_table=$DATASET.$TABLE_NAME2 \
+    --time_partitioning_field="TradeDate" \ 
+    --time_partitioning_type="DAY" \
+    --clustering_fields="Symbol" \
     "SELECT * FROM $DATASET.$TABLE_NAME"
+
+
+
+# bq query     --use_legacy_sql=false     --location=US     --destination_table=$DATASET.$TABLE_NAME2     --time_partitioning_field="TradeDate"     --time_partitioning_type="DAY"     --clustering_fields="Symbol"     "SELECT * FROM $DATASET.$TABLE_NAME"
 
 
     # create a partitioned table partitioned by ethe FFFFFF field
